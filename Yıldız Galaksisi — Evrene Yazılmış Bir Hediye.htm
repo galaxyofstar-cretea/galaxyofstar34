@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="tr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yıldız Galaksisi — Evrene Yazılmış Bir Hediye</title>
+<link href="Y%C4%B1ld%C4%B1z%20Galaksisi%20%E2%80%94%20Evrene%20Yaz%C4%B1lm%C4%B1%C5%9F%20Bir%20Hediye_files/css2.css" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #C8A96E;
+    --gold-light: #E8D5A3;
+    --gold-dark: #8A6F3E;
+    --deep: #060810;
+    --deep2: #0D1220;
+    --deep3: #131928;
+    --mid: #1E2640;
+    --text: #E8E4D8;
+    --muted: #8A8FA8;
+    --white: #F5F2EB;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--deep);
+    color: var(--text);
+    overflow-x: hidden;
+    font-weight: 300;
+  }
+
+  /* Stars background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 40% 10%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 55% 30%, rgba(200,169,110,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 55%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 8%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 15% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 35% 75%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 65%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 75% 80%, rgba(200,169,110,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 90%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 88% 35%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 85%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(2px 2px at 50% 50%, rgba(200,169,110,0.3) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(200,169,110,0.1);
+    background: rgba(6,8,16,0.85);
+    backdrop-filter: blur(12px);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 0.55rem 1.4rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+  }
+
+  .nav-cta:hover {
+    background: var(--gold);
+    color: var(--deep);
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--white);
+    max-width: 900px;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    color: var(--muted);
+    max-width: 480px;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--deep);
+    border: none;
+    padding: 0.9rem 2.2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid rgba(232,228,216,0.2);
+    padding: 0.9rem 2.2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .hero-trust {
+    margin-top: 4rem;
+    font-size: 0.72rem;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    opacity: 0.7;
+  }
+
+  /* DIVIDER */
+  .divider {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .divider-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+    margin: 0 auto;
+  }
+
+  /* SECTION */
+  section {
+    position: relative;
+    z-index: 1;
+    padding: 6rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 300;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .section-sub {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.92rem;
+    max-width: 500px;
+    margin: 0 auto 4rem;
+    line-height: 1.8;
+  }
+
+  /* HOW IT WORKS */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(200,169,110,0.1);
+  }
+
+  .step {
+    background: var(--deep2);
+    padding: 3rem 2.5rem;
+    position: relative;
+  }
+
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    color: rgba(200,169,110,0.1);
+    font-weight: 300;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    line-height: 1;
+  }
+
+  .step-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .step-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+  }
+
+  .step-text {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  /* CERTIFICATE PREVIEW */
+  .cert-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .cert-features {
+    list-style: none;
+  }
+
+  .cert-features li {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(200,169,110,0.08);
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .cert-features li::before {
+    content: '✦';
+    color: var(--gold);
+    font-size: 0.7rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+  }
+
+  .cert-card {
+    background: var(--deep2);
+    border: 1px solid rgba(200,169,110,0.2);
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cert-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(200,169,110,0.05) 0%, transparent 70%);
+  }
+
+  .cert-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  .cert-date {
+    font-size: 0.7rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .cert-title-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .cert-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+
+  .cert-data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(200,169,110,0.1);
+    margin: 0 -1rem;
+  }
+
+  .cert-data-item {
+    background: var(--deep3);
+    padding: 0.8rem;
+  }
+
+  .cert-data-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+
+  .cert-data-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--gold);
+  }
+
+  .cert-message {
+    margin-top: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.7;
+    border-top: 1px solid rgba(200,169,110,0.1);
+    padding-top: 1.5rem;
+  }
+
+  /* PRICING */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(200,169,110,0.1);
+  }
+
+  .pricing-card {
+    background: var(--deep2);
+    padding: 2.5rem;
+    position: relative;
+    transition: background 0.3s;
+  }
+
+  .pricing-card.featured {
+    background: var(--deep3);
+  }
+
+  .pricing-badge {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--deep);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+  }
+
+  .pricing-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .pricing-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+    font-weight: 400;
+  }
+
+  .pricing-tagline {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .pricing-price {
+    margin-bottom: 2rem;
+  }
+
+  .pricing-currency {
+    font-size: 1rem;
+    color: var(--gold);
+    vertical-align: top;
+    margin-top: 0.5rem;
+    display: inline-block;
+  }
+
+  .pricing-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .pricing-features {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  .pricing-features li {
+    font-size: 0.82rem;
+    color: var(--muted);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(200,169,110,0.06);
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+
+  .pricing-features li::before {
+    content: '✦';
+    color: var(--gold);
+    font-size: 0.6rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+  }
+
+  .btn-pricing {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(200,169,110,0.3);
+    color: var(--gold);
+    padding: 0.85rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .btn-pricing:hover, .pricing-card.featured .btn-pricing {
+    background: var(--gold);
+    color: var(--deep);
+    border-color: var(--gold);
+  }
+
+  /* PAYMENT MODAL */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(6,8,16,0.92);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+  }
+
+  .modal-overlay.active {
+    display: flex;
+  }
+
+  .modal {
+    background: var(--deep2);
+    border: 1px solid rgba(200,169,110,0.2);
+    padding: 3rem;
+    width: 560px;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+
+  .modal-close:hover { color: var(--white); }
+
+  .modal-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+  }
+
+  .modal-sub {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+  }
+
+  .modal-plan-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(200,169,110,0.1);
+    border: 1px solid rgba(200,169,110,0.2);
+    padding: 0.4rem 1rem;
+    font-size: 0.78rem;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    letter-spacing: 0.08em;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-input {
+    width: 100%;
+    background: var(--deep3);
+    border: 1px solid rgba(200,169,110,0.12);
+    color: var(--text);
+    padding: 0.8rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-input:focus {
+    border-color: rgba(200,169,110,0.4);
+  }
+
+  .form-input::placeholder { color: var(--muted); opacity: 0.5; }
+
+  textarea.form-input {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  /* PAYMENT METHODS */
+  .pay-section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .pay-tabs {
+    display: flex;
+    gap: 2px;
+    background: rgba(200,169,110,0.08);
+    margin-bottom: 1.5rem;
+  }
+
+  .pay-tab {
+    flex: 1;
+    padding: 0.7rem;
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.05em;
+  }
+
+  .pay-tab.active {
+    background: var(--deep3);
+    color: var(--gold);
+  }
+
+  .pay-panel { display: none; }
+  .pay-panel.active { display: block; }
+
+  /* OKX panel */
+  .okx-box {
+    background: var(--deep3);
+    border: 1px solid rgba(200,169,110,0.12);
+    padding: 1.8rem;
+    text-align: center;
+  }
+
+  .okx-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .okx-logo-icon {
+    width: 36px;
+    height: 36px;
+    background: #000;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #fff;
+    letter-spacing: -0.02em;
+  }
+
+  .okx-logo-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--white);
+    letter-spacing: 0.05em;
+  }
+
+  .okx-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .okx-coins {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .okx-coin {
+    background: rgba(200,169,110,0.08);
+    border: 1px solid rgba(200,169,110,0.15);
+    border-radius: 100px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.72rem;
+    color: var(--gold);
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.05em;
+  }
+
+  .okx-coin:hover, .okx-coin.selected {
+    background: rgba(200,169,110,0.2);
+    border-color: var(--gold);
+  }
+
+  .okx-address-wrap {
+    background: rgba(6,8,16,0.5);
+    border: 1px solid rgba(200,169,110,0.15);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: none;
+  }
+
+  .okx-address-wrap.visible { display: block; }
+
+  .okx-address-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+
+  .okx-qr {
+    width: 120px;
+    height: 120px;
+    background: white;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+  }
+
+  .okx-qr svg { width: 100%; height: 100%; }
+
+  .okx-addr {
+    font-family: monospace;
+    font-size: 0.72rem;
+    color: var(--gold);
+    word-break: break-all;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .okx-copy-btn {
+    background: transparent;
+    border: 1px solid rgba(200,169,110,0.3);
+    color: var(--gold);
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    transition: all 0.2s;
+    letter-spacing: 0.08em;
+  }
+
+  .okx-copy-btn:hover {
+    background: rgba(200,169,110,0.1);
+  }
+
+  .okx-note {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 1rem;
+    line-height: 1.6;
+    border-top: 1px solid rgba(200,169,110,0.08);
+    padding-top: 1rem;
+  }
+
+  /* Card panel */
+  .card-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .card-full { grid-column: 1 / -1; }
+
+  /* Summary */
+  .order-summary {
+    background: var(--deep3);
+    border: 1px solid rgba(200,169,110,0.1);
+    padding: 1.2rem 1.5rem;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .order-summary-label {
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  .order-summary-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--gold);
+  }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--gold);
+    color: var(--deep);
+    border: none;
+    padding: 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+  }
+
+  .btn-submit:hover { background: var(--gold-light); }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(200,169,110,0.08);
+  }
+
+  .testimonial {
+    background: var(--deep2);
+    padding: 2.5rem;
+  }
+
+  .t-stars {
+    color: var(--gold);
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.2rem;
+  }
+
+  .t-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  .t-author {
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  .t-author strong {
+    color: var(--white);
+    display: block;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+  }
+
+  /* FAQ */
+  .faq-list { max-width: 700px; margin: 0 auto; }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(200,169,110,0.1);
+  }
+
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    text-align: left;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: color 0.2s;
+  }
+
+  .faq-q:hover { color: var(--gold); }
+
+  .faq-arrow {
+    color: var(--gold);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+  }
+
+  .faq-item.open .faq-arrow { transform: rotate(45deg); }
+
+  .faq-a {
+    display: none;
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.8;
+    padding-bottom: 1.5rem;
+  }
+
+  .faq-item.open .faq-a { display: block; }
+
+  /* CTA SECTION */
+  .cta-section {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 8rem 2rem;
+    border-top: 1px solid rgba(200,169,110,0.08);
+  }
+
+  .cta-section .section-title { margin-bottom: 1.5rem; }
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid rgba(200,169,110,0.08);
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.78rem;
+    color: var(--muted);
+    max-width: 200px;
+    line-height: 1.6;
+  }
+
+  .footer-links h4 {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .footer-links ul { list-style: none; }
+
+  .footer-links li { margin-bottom: 0.5rem; }
+
+  .footer-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--white); }
+
+  .footer-bottom {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.72rem;
+    color: var(--muted);
+    border-top: 1px solid rgba(200,169,110,0.05);
+    opacity: 0.6;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .steps, .pricing-grid, .testimonials { grid-template-columns: 1fr; }
+    .cert-wrap { grid-template-columns: 1fr; }
+    footer { flex-direction: column; padding: 2rem 1.5rem; }
+    .card-fields { grid-template-columns: 1fr; }
+    .card-full { grid-column: auto; }
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero > * {
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .hero > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero > *:nth-child(2) { animation-delay: 0.25s; }
+  .hero > *:nth-child(3) { animation-delay: 0.4s; }
+  .hero > *:nth-child(4) { animation-delay: 0.55s; }
+  .hero > *:nth-child(5) { animation-delay: 0.7s; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">✦ Yıldız Galaksisi</a>
+  <ul class="nav-links">
+    <li><a href="#nasil">Nasıl Çalışır</a></li>
+    <li><a href="#sertifika">Sertifika</a></li>
+    <li><a href="#fiyatlar">Fiyatlar</a></li>
+    <li><a href="#sss">SSS</a></li>
+  </ul>
+  <a href="#fiyatlar" class="nav-cta">Yıldız Seç</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow">✦ Resmi Yıldız Adlandırma Kayıt Defteri</p>
+  <h1 class="hero-title">Evrene yazılmış<br><em>bir hediye</em></h1>
+  <p class="hero-sub">Sevdiğiniz biri için bir yıldıza isim verin. Ömür boyu kalacak, gerçek göksel koordinatlara sahip özel bir dijital sertifika.</p>
+  <div class="hero-buttons">
+    <a href="#fiyatlar" class="btn-primary">Bir Yıldıza İsim Ver ⭐</a>
+    <a href="#sertifika" class="btn-ghost">Sertifikayı İncele</a>
+  </div>
+  <p class="hero-trust">★ NASA doğrulamalı koordinatlar · Anında dijital teslimat · OKX Kripto ile Ödeme</p>
+</div>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- HOW IT WORKS -->
+<section id="nasil">
+  <p class="section-eyebrow">✦ Basit İşlem</p>
+  <h2 class="section-title">Sonsuza dek sürecek<br>üç adım</h2>
+  <p class="section-sub">Yıldızınızı seçmekten evrene hediye göndermeye kadar her şey 5 dakikadan az sürüyor.</p>
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">01</span>
+      <span class="step-icon">🔭</span>
+      <h3 class="step-title">Yıldızınızı Seçin</h3>
+      <p class="step-text">Kayıtlı yıldızlar kataloğumuza göz atın. Her 
+biri gerçek, takip edilen ve kendine özgü koordinatlarıyla kataloglanmış
+ yıldızlardır.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">02</span>
+      <span class="step-icon">✏️</span>
+      <h3 class="step-title">Ona Bir İsim Ver</h3>
+      <p class="step-text">Yıldızınıza sizin için anlamlı olan birinin 
+adını verin; sevdiğiniz birinin, bir anının, bir dileğin. Bunu kalıcı 
+kayıt defterimize kaydedeceğiz.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <span class="step-icon">🎁</span>
+      <h3 class="step-title">Sertifikayı Alın</h3>
+      <p class="step-text">Hediyeyi alan kişi, yıldızın adı, takımyıldızı ve tam göksel koordinatlarını içeren güzel bir dijital sertifika alır.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- CERTIFICATE -->
+<section id="sertifika">
+  <p class="section-eyebrow">✦ Hediye</p>
+  <h2 class="section-title">Sonsuza dek saklanmaya<br>değer bir sertifika</h2>
+  <p class="section-sub">Her yıldız hediyesi, alıcınızın ömür boyu saklayacağı güzel tasarlanmış bir dijital sertifika içerir.</p>
+  <div class="cert-wrap">
+    <div>
+      <ul class="cert-features">
+        <li>Astronomik kataloglardan doğrulanmış, gerçek yıldız koordinatları.</li>
+        <li>Takımyıldız, sağ yükseliş ve sapma verileri.</li>
+        <li>Kayıt ve isim verme töreninin tarihi.</li>
+        <li>Kişisel mesajınız, şık bir şekilde basılmış.</li>
+        <li>Yüksek çözünürlüklü PDF, her boyutta baskıya hazır.</li>
+      </ul>
+      <a href="#fiyatlar" class="btn-primary" style="display:inline-block;margin-top:2rem;">Bir Yıldıza İsim Ver ⭐</a>
+    </div>
+    <div class="cert-card">
+      <p class="cert-logo">✦ Yıldız Galaksisi</p>
+      <p class="cert-date">17 Mayıs 2026</p>
+      <p class="cert-title-label">Yıldız Kayıt Belgesi</p>
+      <p class="cert-name">Aurelia</p>
+      <div class="cert-data">
+        <div class="cert-data-item">
+          <p class="cert-data-label">Takımyıldız</p>
+          <p class="cert-data-val">ORION</p>
+        </div>
+        <div class="cert-data-item">
+          <p class="cert-data-label">Sağ Yükseliş</p>
+          <p class="cert-data-val">05s 55m</p>
+        </div>
+        <div class="cert-data-item">
+          <p class="cert-data-label">Büyüklük</p>
+          <p class="cert-data-val">4.2</p>
+        </div>
+      </div>
+      <p class="cert-message">"Evrenimi aydınlatan O'na. Bu yıldız, senin benim için parladığın kadar parlak bir şekilde senin için de parlasın."</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- PRICING -->
+<section id="fiyatlar">
+  <p class="section-eyebrow">✦ Fiyatlandırma</p>
+  <h2 class="section-title">Her türlü etkinlik için<br>hazırlanmış paketler</h2>
+  <p class="section-sub">Her pakete resmi yıldız kaydı, koordinatlar ve dijital sertifika dahildir.</p>
+
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <span class="pricing-icon">⭐</span>
+      <h3 class="pricing-name">Parlak Yıldız</h3>
+      <p class="pricing-tagline">Evrene mükemmel bir giriş. Doğum günleri, yıldönümleri veya samimi bir jest için ideal.</p>
+      <div class="pricing-price">
+        <span class="pricing-currency">$</span>
+        <span class="pricing-amount">29</span>
+      </div>
+      <ul class="pricing-features">
+        <li>Gerçek koordinatlara sahip 1 isimli yıldız</li>
+        <li>Yıldız kataloğumuzda resmi kayıt</li>
+        <li>Dijital sertifika (PDF, yüksek çözünürlük)</li>
+        <li>Takımyıldız ve gökyüzü konum rehberi</li>
+        <li>Anında e-posta teslimatı</li>
+      </ul>
+      <button class="btn-pricing" onclick="openModal('Parlak Yıldız', 29)">Parlak Yıldızı Seçin</button>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="pricing-badge">En Popüler</div>
+      <span class="pricing-icon">🌟</span>
+      <h3 class="pricing-name">Süpernova</h3>
+      <p class="pricing-tagline">Olağanüstü anlar için. Çerçeveli, baskıya hazır sertifika dahildir.</p>
+      <div class="pricing-price">
+        <span class="pricing-currency">$</span>
+        <span class="pricing-amount">59</span>
+      </div>
+      <ul class="pricing-features">
+        <li>Bright Star'daki her şey</li>
+        <li>Çerçeveli, baskıya hazır PDF sertifika</li>
+        <li>Özel yıldız konum haritası</li>
+        <li>Öncelikli kayıt ve doğrulama</li>
+        <li>Kişiselleştirilmiş ithaf sayfası</li>
+      </ul>
+      <button class="btn-pricing" onclick="openModal('Süpernova', 59)">Süpernova'yı Seçin ✦</button>
+    </div>
+
+    <div class="pricing-card">
+      <span class="pricing-icon">🌌</span>
+      <h3 class="pricing-name">Galaksi</h3>
+      <p class="pricing-tagline">En üst düzey kozmik hediye. Takımyıldız haritası posteri ve ömür boyu takip dahildir.</p>
+      <div class="pricing-price">
+        <span class="pricing-currency">$</span>
+        <span class="pricing-amount">99</span>
+      </div>
+      <ul class="pricing-features">
+        <li>Süpernova'daki her şey</li>
+        <li>Büyük boy takımyıldız haritası posteri (24×36")</li>
+        <li>Ömür boyu yıldız izleme güncellemeleri</li>
+        <li>Daimi şöhretler listesine ekleme</li>
+        <li>Ücretsiz ikinci yıldız hediyesi</li>
+      </ul>
+      <button class="btn-pricing" onclick="openModal('Galaksi', 99)">Galaksi'yi Seçin</button>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- TESTIMONIALS -->
+<section>
+  <p class="section-eyebrow">✦ Aşk Mektupları</p>
+  <h2 class="section-title">İnsanları etkileyen yıldızlar</h2>
+  <p class="section-sub">Evrenin en anlamlı hediyesini veren insanların gerçek hikayeleri.</p>
+  <div class="testimonials">
+    <div class="testimonial">
+      <p class="t-stars">★★★★★</p>
+      <p class="t-text">"Büyükannem vefat ettikten sonra bir yıldıza 
+onun adını verdim. Annem sertifikayı açtığında ağladı. Daha önce hiç 
+böyle bir şey almamıştı. Yıldız hâlâ orada, her gece parlıyor."</p>
+      <div class="t-author">
+        <strong>Elena S.</strong>
+        Annesine hediye · Süpernova
+      </div>
+    </div>
+    <div class="testimonial">
+      <p class="t-stars">★★★★★</p>
+      <p class="t-text">"Nişanımız için bir yıldıza nişanlımın adını 
+verdim. İlk başta şaka sandı, sonra sertifikayı gördü. Koordinatlar 
+gerçekti. Araştırdı. Gerçekten orada duruyor."</p>
+      <div class="t-author">
+        <strong>Marcus R.</strong>
+        Nişan hediyesi · Parlak Yıldız
+      </div>
+    </div>
+    <div class="testimonial">
+      <p class="t-stars">★★★★★</p>
+      <p class="t-text">"Kızıma adını verdiğim bir yıldız yaptırdım. 
+Dört yaşında. Zaten üzerinde adı yazılı bir yıldızı var. Her gece 
+yatmadan önce gösteriyor."</p>
+      <div class="t-author">
+        <strong>James T.</strong>
+        Kızına hediye · Galaksi
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- FAQ -->
+<section id="sss">
+  <p class="section-eyebrow">✦ Sorular</p>
+  <h2 class="section-title">Bilmeniz gereken her şey</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Yıldız adlandırma resmi mi?
+        <span class="faq-arrow">+</span>
+      </button>
+      <p class="faq-a">Kaydımız resmi bir yıldız adlandırma kataloğudur.
+ Koordinatlar gerçek astronomik verilerden alınmıştır ve NASA tarafından
+ doğrulanmıştır. Yıldız her zaman orada olacak.</p>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Sertifikayı ne zaman alırım?
+        <span class="faq-arrow">+</span>
+      </button>
+      <p class="faq-a">Ödeme onaylandıktan hemen sonra dijital 
+sertifikanız e-posta adresinize gönderilir. OKX kripto ödemelerinde onay
+ süresi ağ yoğunluğuna göre 1–15 dakika sürebilir.</p>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        OKX ile hangi kriptolarla ödeme yapabilirim?
+        <span class="faq-arrow">+</span>
+      </button>
+      <p class="faq-a">USDT (TRC-20, ERC-20), BTC, ETH ve BNB ile ödeme kabul ediyoruz. Ödeme sırasında tercih ettiğiniz ağı ve token'ı seçebilirsiniz.</p>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Sertifikayı bastırabilir miyim?
+        <span class="faq-arrow">+</span>
+      </button>
+      <p class="faq-a">Evet! Tüm sertifikalar yüksek çözünürlüklü PDF 
+formatında gönderilir. Süpernova ve Galaksi paketlerinde çerçeveli, 
+baskıya hazır versiyon da mevcuttur.</p>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        İade politikası nedir?
+        <span class="faq-arrow">+</span>
+      </button>
+      <p class="faq-a">Dijital ürün olduğundan iade işlemi sertifika 
+teslim edilmeden önce mümkündür. Sorun yaşarsanız 24 saat içinde destek 
+ekibimizle iletişime geçin.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <p class="section-eyebrow">✦ Başlayın</p>
+  <h2 class="section-title">Evrenin en anlamlı hediyesini<br>vermeye hazır mısınız?</h2>
+  <a href="#fiyatlar" class="btn-primary" style="display:inline-block;margin-top:2rem;">Bir Yıldıza İsim Ver ⭐</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <p class="footer-brand">✦ Yıldız Galaksisi</p>
+    <p class="footer-tagline">Önem verdiğiniz kişilerin adlarıyla adlandırılmış yıldızlar. Evrende yazılmış bir hediye.</p>
+  </div>
+  <div class="footer-links">
+    <h4>Ürün</h4>
+    <ul>
+      <li><a href="#nasil">Nasıl Çalışır</a></li>
+      <li><a href="#fiyatlar">Fiyatlandırma</a></li>
+      <li><a href="#sertifika">Sertifika</a></li>
+      <li><a href="#sss">SSS</a></li>
+    </ul>
+  </div>
+  <div class="footer-links">
+    <h4>Şirket</h4>
+    <ul>
+      <li><a href="#">Hakkımızda</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">İletişim</a></li>
+    </ul>
+  </div>
+  <div class="footer-links">
+    <h4>Yasal</h4>
+    <ul>
+      <li><a href="#">Gizlilik Politikası</a></li>
+      <li><a href="#">Hizmet Şartları</a></li>
+      <li><a href="#">İade Politikası</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">© 2026 Yıldız Galaksisi. Tüm hakları saklıdır.</div>
+
+<!-- PAYMENT MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h2 class="modal-title">Siparişi Tamamla</h2>
+    <p class="modal-sub">Yıldızınız kayıt altına alınacak ve sertifikanız anında gönderilecek.</p>
+
+    <div class="modal-plan-badge" id="planBadge">✦ Parlak Yıldız — $29</div>
+
+    <div class="form-group">
+      <label class="form-label">Yıldıza verilecek isim</label>
+      <input type="text" class="form-input" placeholder="Örn: Ayşe, Mehmet, Büyükannem Fatma...">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">E-posta adresiniz</label>
+      <input type="email" class="form-input" placeholder="sertifika@ornek.com">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Kişisel mesajınız (isteğe bağlı)</label>
+      <textarea class="form-input" placeholder="Sertifikada yer alacak özel mesajınız..."></textarea>
+    </div>
+
+    <p class="pay-section-label">Ödeme Yöntemi</p>
+
+    <div class="pay-tabs">
+      <button class="pay-tab active" onclick="switchTab('okx', this)">OKX Kripto</button>
+      <button class="pay-tab" onclick="switchTab('card', this)">Kredi Kartı</button>
+      <button class="pay-tab" onclick="switchTab('bank', this)">Banka Havalesi</button>
+    </div>
+
+    <!-- OKX Panel -->
+    <div class="pay-panel active" id="panel-okx">
+      <div class="okx-box">
+        <div class="okx-logo-wrap">
+          <div class="okx-logo-icon">OKX</div>
+          <span class="okx-logo-text">OKX Pay</span>
+        </div>
+        <p class="okx-desc">Kripto para ile güvenli, hızlı ve düşük komisyonlu ödeme yapın. Tercih ettiğiniz token'ı seçin:</p>
+        <div class="okx-coins">
+          <button class="okx-coin selected" onclick="selectCoin(this, 'USDT-TRC20')">USDT (TRC-20)</button>
+          <button class="okx-coin" onclick="selectCoin(this, 'USDT-ERC20')">USDT (ERC-20)</button>
+          <button class="okx-coin" onclick="selectCoin(this, 'BTC')">BTC</button>
+          <button class="okx-coin" onclick="selectCoin(this, 'ETH')">ETH</button>
+          <button class="okx-coin" onclick="selectCoin(this, 'BNB')">BNB</button>
+        </div>
+
+        <div class="okx-address-wrap visible" id="cryptoAddrWrap">
+          <p class="okx-address-label">Ödeme Adresi — <span id="selectedCoin">USDT (TRC-20)</span></p>
+          <div class="okx-qr" id="qrWrap">
+            <!-- Simple QR placeholder pattern -->
+            <svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+              <rect width="21" height="21" fill="white"></rect>
+              <!-- Finder patterns -->
+              <rect x="0" y="0" width="7" height="7" fill="black"></rect><rect x="1" y="1" width="5" height="5" fill="white"></rect><rect x="2" y="2" width="3" height="3" fill="black"></rect>
+              <rect x="14" y="0" width="7" height="7" fill="black"></rect><rect x="15" y="1" width="5" height="5" fill="white"></rect><rect x="16" y="2" width="3" height="3" fill="black"></rect>
+              <rect x="0" y="14" width="7" height="7" fill="black"></rect><rect x="1" y="15" width="5" height="5" fill="white"></rect><rect x="2" y="16" width="3" height="3" fill="black"></rect>
+              <!-- Data modules pattern -->
+              <rect x="8" y="0" width="1" height="1" fill="black"></rect><rect x="10" y="0" width="1" height="1" fill="black"></rect><rect x="12" y="0" width="1" height="1" fill="black"></rect>
+              <rect x="7" y="2" width="1" height="1" fill="black"></rect><rect x="9" y="2" width="1" height="1" fill="black"></rect><rect x="11" y="2" width="1" height="1" fill="black"></rect>
+              <rect x="8" y="4" width="1" height="1" fill="black"></rect><rect x="10" y="4" width="2" height="1" fill="black"></rect><rect x="13" y="4" width="1" height="1" fill="black"></rect>
+              <rect x="7" y="6" width="1" height="1" fill="black"></rect><rect x="9" y="6" width="1" height="1" fill="black"></rect><rect x="12" y="6" width="1" height="1" fill="black"></rect>
+              <rect x="7" y="8" width="2" height="1" fill="black"></rect><rect x="10" y="8" width="1" height="1" fill="black"></rect><rect x="12" y="8" width="2" height="1" fill="black"></rect>
+              <rect x="0" y="8" width="1" height="1" fill="black"></rect><rect x="2" y="8" width="3" height="1" fill="black"></rect><rect x="6" y="8" width="1" height="1" fill="black"></rect>
+              <rect x="0" y="10" width="2" height="1" fill="black"></rect><rect x="4" y="10" width="1" height="1" fill="black"></rect><rect x="7" y="10" width="1" height="1" fill="black"></rect><rect x="9" y="10" width="3" height="1" fill="black"></rect><rect x="14" y="10" width="3" height="1" fill="black"></rect>
+              <rect x="1" y="12" width="2" height="1" fill="black"></rect><rect x="5" y="12" width="1" height="1" fill="black"></rect><rect x="8" y="12" width="1" height="1" fill="black"></rect><rect x="11" y="12" width="2" height="1" fill="black"></rect><rect x="15" y="12" width="2" height="1" fill="black"></rect>
+              <rect x="8" y="14" width="2" height="1" fill="black"></rect><rect x="12" y="14" width="1" height="1" fill="black"></rect><rect x="15" y="14" width="1" height="1" fill="black"></rect>
+              <rect x="8" y="16" width="1" height="1" fill="black"></rect><rect x="10" y="16" width="3" height="1" fill="black"></rect><rect x="15" y="16" width="3" height="1" fill="black"></rect>
+              <rect x="7" y="18" width="2" height="1" fill="black"></rect><rect x="11" y="18" width="1" height="1" fill="black"></rect><rect x="14" y="18" width="1" height="1" fill="black"></rect><rect x="17" y="18" width="2" height="1" fill="black"></rect>
+              <rect x="8" y="20" width="1" height="1" fill="black"></rect><rect x="10" y="20" width="2" height="1" fill="black"></rect><rect x="14" y="20" width="2" height="1" fill="black"></rect>
+            </svg>
+          </div>
+          <p class="okx-addr" id="cryptoAddr">TQzeMBdK9b7rEHTTVZMVFkRo7RuWpKZGfQ</p>
+          <button class="okx-copy-btn" onclick="copyAddr()">Adresi Kopyala</button>
+        </div>
+
+        <p class="okx-note">
+          ⚠️ Yalnızca seçilen ağa uygun token gönderin. Tutarı tam 
+olarak gönderdiğinizden emin olun. Ödeme onaylandıktan sonra 
+sertifikanız e-posta ile iletilecektir.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card Panel -->
+    <div class="pay-panel" id="panel-card">
+      <div class="card-fields">
+        <div class="form-group card-full">
+          <label class="form-label">Kart Numarası</label>
+          <input type="text" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCard(this)">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Son Kullanma</label>
+          <input type="text" class="form-input" placeholder="AA/YY" maxlength="5">
+        </div>
+        <div class="form-group">
+          <label class="form-label">CVV</label>
+          <input type="text" class="form-input" placeholder="123" maxlength="4">
+        </div>
+        <div class="form-group card-full">
+          <label class="form-label">Kart Sahibinin Adı</label>
+          <input type="text" class="form-input" placeholder="Ad Soyad">
+        </div>
+      </div>
+    </div>
+
+    <!-- Bank Panel -->
+    <div class="pay-panel" id="panel-bank">
+      <div style="background:var(--deep3);border:1px solid rgba(200,169,110,0.12);padding:1.5rem;">
+        <p style="font-size:0.78rem;color:var(--muted);line-height:1.8;margin-bottom:1rem;">Aşağıdaki hesap bilgilerine havale yapın ve dekontunuzu destek@yildizgalaksisi.com adresine gönderin.</p>
+        <table style="width:100%;font-size:0.82rem;border-collapse:collapse;">
+          <tbody><tr><td style="color:var(--muted);padding:0.4rem 0;width:40%;">Banka</td><td style="color:var(--gold);">Garanti Bankası</td></tr>
+          <tr><td style="color:var(--muted);padding:0.4rem 0;">Alıcı</td><td style="color:var(--white);">Yıldız Galaksisi Ltd.</td></tr>
+          <tr><td style="color:var(--muted);padding:0.4rem 0;">IBAN</td><td style="color:var(--white);font-family:monospace;font-size:0.78rem;">TR12 0006 2000 1234 0006 2000 12</td></tr>
+          <tr><td style="color:var(--muted);padding:0.4rem 0;">Açıklama</td><td style="color:var(--gold);">Sipariş adınız + paket adı</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="order-summary">
+      <span class="order-summary-label">Toplam Tutar</span>
+      <span class="order-summary-price" id="modalPrice">$29</span>
+    </div>
+
+    <button class="btn-submit" onclick="submitOrder()">Siparişi Onayla &amp; Gönder</button>
+  </div>
+</div>
+
+<script>
+  let currentPlan = 'Parlak Yıldız';
+  let currentPrice = 29;
+  let currentCoin = 'USDT-TRC20';
+
+  const addresses = {
+    'USDT-TRC20': 'TQzeMBdK9b7rEHTTVZMVFkRo7RuWpKZGfQ',
+    'USDT-ERC20': '0x3Fa4B0E5e0d1c3e9f7A2b8D6C4a1F9e3B7c5D2A',
+    'BTC': 'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh',
+    'ETH': '0x3Fa4B0E5e0d1c3e9f7A2b8D6C4a1F9e3B7c5D2A',
+    'BNB': 'bnb1grpf0955h0ykzq3ar5nmum7y6gdfl6lxfn46h2'
+  };
+
+  const coinLabels = {
+    'USDT-TRC20': 'USDT (TRC-20)',
+    'USDT-ERC20': 'USDT (ERC-20)',
+    'BTC': 'BTC',
+    'ETH': 'ETH',
+    'BNB': 'BNB'
+  };
+
+  function openModal(plan, price) {
+    currentPlan = plan;
+    currentPrice = price;
+    document.getElementById('planBadge').textContent = '✦ ' + plan + ' — $' + price;
+    document.getElementById('modalPrice').textContent = '$' + price;
+    document.getElementById('modalOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function closeModalOutside(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  }
+
+  function switchTab(tab, btn) {
+    document.querySelectorAll('.pay-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.pay-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-' + tab).classList.add('active');
+  }
+
+  function selectCoin(btn, coin) {
+    document.querySelectorAll('.okx-coin').forEach(c => c.classList.remove('selected'));
+    btn.classList.add('selected');
+    currentCoin = coin;
+    document.getElementById('selectedCoin').textContent = coinLabels[coin];
+    document.getElementById('cryptoAddr').textContent = addresses[coin];
+    document.getElementById('cryptoAddrWrap').classList.add('visible');
+  }
+
+  function copyAddr() {
+    const addr = addresses[currentCoin];
+    navigator.clipboard.writeText(addr).then(() => {
+      const btn = document.querySelector('.okx-copy-btn');
+      btn.textContent = '✓ Kopyalandı!';
+      setTimeout(() => btn.textContent = 'Adresi Kopyala', 2000);
+    });
+  }
+
+  function formatCard(input) {
+    let v = input.value.replace(/\D/g, '').substring(0, 16);
+    input.value = v.replace(/(.{4})/g, '$1 ').trim();
+  }
+
+  async function submitOrder() {
+    const nameVal = document.querySelector('.modal input[placeholder*="isim"]').value.trim();
+    const emailVal = document.querySelector('.modal input[type="email"]').value.trim();
+    const msgVal  = document.querySelector('.modal textarea').value.trim();
+
+    if (!nameVal) { showToast('Lütfen yıldıza verilecek ismi girin.', 'error'); return; }
+    if (!emailVal || !emailVal.includes('@')) { showToast('Lütfen geçerli bir e-posta adresi girin.', 'error'); return; }
+
+    const btn = document.querySelector('.btn-submit');
+    btn.textContent = '✦ Sertifika Hazırlanıyor...';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('/api/order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          starName: nameVal,
+          email: emailVal,
+          message: msgVal,
+          plan: currentPlan,
+          price: currentPrice,
+          coin: currentCoin || 'OKX Kripto'
+        })
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        closeModal();
+        showToast(`✦ Sertifikanız ${emailVal} adresine gönderildi!`, 'success', 7000);
+      } else {
+        showToast('Bir hata oluştu: ' + (data.error || 'Lütfen tekrar deneyin.'), 'error');
+      }
+    } catch (err) {
+      showToast('Bağlantı hatası. İnternet bağlantınızı kontrol edin.', 'error');
+    } finally {
+      btn.textContent = 'Siparişi Onayla & Gönder';
+      btn.disabled = false;
+    }
+  }
+
+  function showToast(msg, type, duration) {
+    const existing = document.querySelector('.site-toast');
+    if (existing) existing.remove();
+    const t = document.createElement('div');
+    t.className = 'site-toast';
+    const bg = type === 'error' ? '#8B2020' : '#C8A96E';
+    const color = type === 'error' ? '#fff' : '#060810';
+    t.style.cssText = `position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:${bg};color:${color};padding:1rem 2rem;font-size:0.85rem;letter-spacing:0.06em;z-index:9999;text-align:center;max-width:90vw;line-height:1.5;box-shadow:0 4px 24px rgba(0,0,0,0.4);`;
+    t.textContent = msg;
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), duration || 4000);
+  }
+
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+</script>
+
+
+</body></html>
