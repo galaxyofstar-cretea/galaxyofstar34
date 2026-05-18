@@ -31,11 +31,11 @@ Müşteri sipariş verdiğinde:
 
 ```js
 const addresses = {
-  'USDT-TRC20': 'TQzeMBdK9b7rEHTTVZMVFkRo7RuWpKZGfQ',  ← KENDİ ADRESİNİZ
-  'USDT-ERC20': '0x3Fa4B0E5...',                         ← KENDİ ADRESİNİZ
-  'BTC': 'bc1qxy2kgd...',                                ← KENDİ ADRESİNİZ
-  'ETH': '0x3Fa4B0E5...',                                ← KENDİ ADRESİNİZ
-  'BNB': 'bnb1grpf09...'                                 ← KENDİ ADRESİNİZ
+  'USDT-TRC20': 'TRgbEquDRE1g8Jid3i5Nguc2SAivMc7NQi',  ← KENDİ ADRESİNİZ
+  'USDT-ERC20': '0x7817d038eb8a0b905ad3b6b30f8c5c655b00b4bb',                         ← KENDİ ADRESİNİZ
+  'BTC': 'bc1qe6uuwfmkqqs6q5dpap5mmy8uejhvuwjga308mjexla63hlhjmv3qnhvc3z',                                ← KENDİ ADRESİNİZ
+  'ETH': '0x7817d038eb8a0b905ad3b6b30f8c5c655b00b4bb',                                ← KENDİ ADRESİNİZ
+  'BNB': ''                                 ← KENDİ ADRESİNİZ
 };
 ```
 
